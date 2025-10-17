@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading - PixelCalc</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif; }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #FFD6EC, #D0BBFF, #A0E7E5);
+    }
+
+    .loading-container {
+      text-align: center;
+      color: #fff;
+    }
+
+    .loading-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .spinner {
+      width: 80px;
+      height: 80px;
+      border: 8px solid rgba(255,255,255,0.3);
+      border-top: 8px solid #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <h1>Loading PixelCalc...</h1>
+    <div class="spinner"></div>
+  </div>
+
+  <script>
+    // Redirect to home.html after 2 seconds
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 2000);
+  </script>
+</body>
+</html>
