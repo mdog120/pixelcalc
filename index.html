@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelCalc</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & general styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #FFD6EC, #D0BBFF, #A0E7E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Logo */
+    .logo {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Main container */
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 60px 40px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* Input fields */
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 10px rgba(160, 231, 229, 0.6);
+    }
+
+    /* Buttons */
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #A0E7E5, #FFD6EC);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Signup link */
+    .signup-link {
+      display: block;
+      margin-top: 15px;
+      color: #555;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .signup-link:hover {
+      color: #A0E7E5;
+    }
+
+    /* About card */
+    .about-card {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 18px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">PixelCalc</div>
+
+  <div class="container">
+    <h1>Welcome Back</h1>
+    <h2>Unlock beautiful pixel art with math</h2>
+
+    <!-- Updated form action to go to loading.html -->
+    <form action="loading.html" method="get">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <a href="signup.html" class="signup-link">Or sign up here →</a>
+
+    <div class="about-card">
+      <h3>About PixelCalc</h3>
+      <p>PixelCalc turns math into beautiful pixel art! Choose your level, solve addition, subtraction, multiplication, division, algebra, or calculus problems, and watch as the image comes alive. Relax, challenge yourself, and create art with numbers!</p>
+    </div>
+
+    <div class="footer">© 2025 PixelCalc</div>
+  </div>
+</body>
+</html>
